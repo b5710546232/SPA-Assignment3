@@ -1,0 +1,24 @@
+p {
+	text-align: justify;
+}
+.header, .footer {
+	padding: 20px;
+}
+
+.footerPage{
+	 text-align: center;
+}
+.my-content{
+	background-color: #defff9;
+	padding: 5%;
+}
+.my-header{
+	background-color:#85ecda;
+	padding: 5%;
+}
+.my-input{
+	padding:10px;	
+}
+.my-submit-button{
+	text-align: center;
+}

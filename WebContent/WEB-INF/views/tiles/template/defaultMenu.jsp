@@ -1,17 +1,18 @@
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <a href="${pageContext.request.contextPath}/" class="btn btn-default">Home</a>
-  </div>
-  <div class="btn-group" role="group">
-    <a href="${pageContext.request.contextPath}/addNewStudent" class="btn btn-default">
-    	<span class="glyphicon glyphicon-plus"></span>
-    	Student
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-center">
+    <a href="${pageContext.request.contextPath}/" class="nav-item is-tab  is-active">Home</a>
+    
+     <a href="${pageContext.request.contextPath}/addNewStudent"class="nav-item is-tab is-active">
+    	<i class="fa fa-plus" ></i> 
+    	Add Student
     </a>
-  </div>
-  <div class="btn-group" role="group">
-    <a href="${pageContext.request.contextPath}/viewStudents" class="btn btn-default">
-		<span class="glyphicon glyphicon-list-alt"></span>
-		Students
+    
+      <a href="${pageContext.request.contextPath}/viewStudents"class="nav-item is-tab is-active">
+		<i class="fa fa-list" ></i> 
+		View Students
 	</a>
+    
+    </div>
   </div>
-</div>
+</nav>

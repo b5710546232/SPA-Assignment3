@@ -1,2 +1,16 @@
-<h2 class="text-center">Pakpon's JDBCTemplate Project </h2>
-<h3 class="text-center">${message }</h3>
+<section class="section">
+	<div class="container">
+		<div class="heading my-header">
+			<h1 class="title">Welcome to Home page</h1>
+			<h2 class="subtitle">
+				Welcome to <strong>Spring</strong>, It is great.
+			</h2>
+		</div>
+		<div class="content my-content">
+			<h1 class="title">Welcome to Assignment - 3</h1>
+		</div>
+	</div>
+</section>
+
+
+
