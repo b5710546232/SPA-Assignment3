@@ -16,6 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
+import com.nattapat.assignment3.database.PatternJDBCTemplate;
 import com.nattapat.assignment3.database.StudentJDBCTemplate;
 
 @Configuration
@@ -63,5 +64,12 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 		StudentJDBCTemplate studentJDBCTemplate = new StudentJDBCTemplate();
 		studentJDBCTemplate.setDataSource(getDataSource());
 		return studentJDBCTemplate;
+	}
+	
+	@Bean
+	public PatternJDBCTemplate getPatternJDBCTemplate() {
+		PatternJDBCTemplate patternJDBCTemplate = new PatternJDBCTemplate();
+		patternJDBCTemplate.setDataSource(getDataSource());
+		return patternJDBCTemplate;
 	}
 }

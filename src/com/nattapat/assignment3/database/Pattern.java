@@ -1,6 +1,7 @@
 package com.nattapat.assignment3.database;
 
-public class Student {
+
+public class Pattern {
 	private String name;
 	private Integer id;
 	private String group;
@@ -49,7 +50,7 @@ public class Student {
 	
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", id=" + id + ", gpax=" + gpax + ", ambition=" + ambition + "group"+group+ "]";
+		return "Student [name=" + name + ", id=" + id + ", gpax=" + gpax + ", ambition=" + ambition + "]";
 	}
 
 	public String getImplmentation() {

@@ -2,15 +2,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <div style="margin: 2%;">
-	<h1 class="header">Students List</h1>
+	<h1 class="header">Pattern List</h1>
 	<h3>${message }</h3>
 	<table class="table table-hover">
 		<tbody>
 			<tr>
 				<th>Id</th>
-				<th>Name</th>
-				<th>GPAX</th>
-				<th>Ambition</th>
+				<th>PatternName</th>
+				<th>Group</th>
+				<th>Implementation</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
@@ -18,7 +18,7 @@
 				<tr>
 					<td><c:out value="${student.id }" /></td>
 					<td><c:out value="${student.name }" /></td>
-					<td><c:out value="${student.gpax }" /></td>
+					<td><c:out value="${student.group }" /></td>
 					<td><c:out value="${student.ambition }" /></td>
 					<td>
 						<button class="button">

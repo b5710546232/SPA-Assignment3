@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.nattapat.assignment3.database.PatternJDBCTemplate;
 import com.nattapat.assignment3.database.Student;
 import com.nattapat.assignment3.database.StudentJDBCTemplate;
 
@@ -25,6 +26,7 @@ public class AppController {
 	// Wired to StudentJDBCTemplate in AppConfig
 	@Autowired
 	private StudentJDBCTemplate studentJDBCTemplate;
+	private PatternJDBCTemplate patternJDBCTemplate;
 	
 	// Home Mapping
 	@RequestMapping(value = { "/"}, method = RequestMethod.GET)
@@ -42,11 +44,14 @@ public class AppController {
 	// Add new student post mapping
 	@PostMapping(value = { "/addNewStudent"})
 	public ModelAndView addNewStudentSubmit(@ModelAttribute("student") Student student) {
-		boolean isValid = ( !student.getName().isEmpty() && !student.getGpax().isNaN() && !student.getAmbition().isEmpty() ) ? true : false;
+		System.out.println("p-safe"+student.toString());
+		boolean isValid = ( !student.getName().isEmpty() && !student.getGroup().isEmpty() && !student.getAmbition().isEmpty() ) ? true : false;
 		if( isValid ) {
 			student.setId(studentJDBCTemplate.listStudents().size() + 1);
 			System.out.println(student.toString());
-			studentJDBCTemplate.create(student.getName(), student.getGpax(), student.getAmbition());
+			
+			studentJDBCTemplate.createPattern(student.getName(), student.getGroup(), student.getAmbition());
+			
 			return new ModelAndView("home", "message", "Succesfully Add New Student");
 		}
 		return new ModelAndView("addNewStudent", "message", "Invalid inputs!");
@@ -71,7 +76,7 @@ public class AppController {
 	@PostMapping("/editStudent/{id}")
 	public ModelAndView editStudentSubmit(@ModelAttribute Student student, ModelMap model) {
 		System.out.println("Updating: " + student);
-		studentJDBCTemplate.update(student.getId(), student.getName(), student.getGpax(), student.getAmbition());
+		studentJDBCTemplate.updatePattern(student.getId(), student.getName(), student.getGroup(), student.getAmbition());
 		return studentsListPage(model.addAttribute("message", "Successfully edited student"));
 	}
 	

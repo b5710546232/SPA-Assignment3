@@ -47,4 +47,21 @@ public class StudentJDBCTemplate implements StudentDAO {
 		System.out.println("Updated Record with ID = " + id );
 		return;
 	}
+	
+	public void updatePattern(Integer id, String name, String group, String ambition ){
+		String SQL = "update Student set name = ?, groups = ?, ambition = ? where id = ?";
+		jdbcTemplateObject.update(SQL, name, group, ambition, id);
+		System.out.println("Updated Record with ID = " + id );
+		return;
+	}
+	
+	public void createPattern(String name, String groups, String ambition) {
+		float gapx = 0;
+		String IMPLEMENTATION = "";
+		String SQL = "insert into Student (name, groups, ambition,gpax,IMPLEMENTATION) values (?, ?, ?,?,?)";
+		jdbcTemplateObject.update( SQL, name, groups, ambition,gapx,IMPLEMENTATION);
+		System.out.println("Created Record Name = " + name + " groups = " + groups + " Ambition = " + ambition);
+		return;
+	}
+	
 }

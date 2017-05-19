@@ -7,7 +7,8 @@
 			</h2>
 		</div>
 		<div class="content my-content">
-			<h1 class="title">Welcome to Assignment - 3</h1>
+
+	<img src="https://spring.io/img/spring-by-pivotal.png">
 		</div>
 	</div>
 </section>

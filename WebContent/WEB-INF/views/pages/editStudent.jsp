@@ -9,11 +9,11 @@
 		<form:input path="name" class="input control" placeholder="name" />
 	</div>
 	<div class="is-grouped my-input">
-		<form:label path="gpax">GPAX</form:label>
-		<form:input path="gpax" class="input control" placeholder="gpax" />
+		<form:label path="group">Group</form:label>
+		<form:input path="group" class="input control" placeholder="gpax" />
 	</div>
 	<div class="is-grouped my-input">
-		<form:label path="ambition">Comment</form:label>
+		<form:label path="ambition">Implementation</form:label>
 		<form:input path="ambition" class="input control"
 			placeholder="ambition" />
 	</div>

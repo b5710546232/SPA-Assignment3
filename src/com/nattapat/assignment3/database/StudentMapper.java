@@ -10,8 +10,9 @@ public class StudentMapper implements RowMapper<Student> {
 		student.setId(rs.getInt("id"));
 		student.setName(rs.getString("name"));
 		student.setAmbition(rs.getString("ambition"));
-//		student.setAmbition(rs.getCharacterStream("ambition").toString());
+		student.setImplmentation(rs.getString("implementation"));
 		student.setGpax(rs.getFloat("gpax"));
+		student.setGroup(rs.getString("groups"));
 		return student;
 	}
 }
